@@ -2,10 +2,10 @@ package it.unibs.ing.ieee.iproblemi;
 
 public class Problema1 {
 
-	public static void main(String[] args) {
+	public static void esegui() {
 		LogTime log = new LogTime();
 
-		long below = 1000000000;
+		long below = Integer.MAX_VALUE;
 
 		log.getTime();
 		//Algoritmo superbello di Vezz
@@ -16,7 +16,7 @@ public class Problema1 {
 		System.err.println(sum);
 
 		log.getTime();
-		//Algoritmo di Michele Dusi
+		
 		sum = 0;
 		for (long i = 3; i <= below; i += 3) {
 			sum += i;
