@@ -33,6 +33,17 @@ public class LogTime implements TimeStamp {
 	 * @see com.unibs.ieeesb.pgar.TimeStamp#getDelta(java.lang.String)
 	 */
 	@Override
+	public void getDelta(double base) {
+		System.err.println("milliseconds unit=" + base);
+		for (int i = 0; i < timestamp.size() - 1; i++)
+			System.err.println((Double.parseDouble(timestamp.get(i)) / base) + "==>"
+					+ (Double.parseDouble(timestamp.get(i)) / base) + "="
+					+ (((Double.parseDouble(timestamp.get(i + 1)) / base)
+							- (Double.parseDouble(timestamp.get(i)) / base))));
+	}
+	
+	
+	@Override
 	public void getDelta(int base) {
 		System.err.println("milliseconds unit=" + base);
 		for (int i = 0; i < timestamp.size() - 1; i++)
