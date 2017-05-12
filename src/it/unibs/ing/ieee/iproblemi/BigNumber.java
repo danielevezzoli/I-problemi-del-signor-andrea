@@ -17,7 +17,7 @@ public class BigNumber implements Comparable<BigNumber>{
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return String.format("%f ^ %f -> %f", dBase, dExp, number);
+		return String.format("%d ^ %d -> %f", base, exp, number);
 	}
 
 	public static long firstDigit(long n) {
@@ -41,7 +41,13 @@ public class BigNumber implements Comparable<BigNumber>{
 	}
 	
 	public void generateNumber() {
-		number = Math.pow(dBase, dExp);
+//		number = Math.pow(dBase, dExp);
+		number = (exp / Math.pow(10, 5)) * log100(base);
+	}
+	
+	private double log100(long n) {
+		return Math.log10(n) / Math.log10(100);
+
 	}
 
 	@Override

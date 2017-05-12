@@ -11,6 +11,8 @@ public interface TimeStamp {
 	final int MINUTE=SECOND*60;
 	final int HOUR=MINUTE*60;
 	final int DAY=HOUR*24;
+	final double MICRO=1e-3;
+	final double NANO=1e-6;
 	/**
 	 * print all delta time
 	 */
@@ -29,6 +31,7 @@ public interface TimeStamp {
 	 * @return
 	 */
 	public String showTime();
+	void getDelta(double base);
 	
 	
 }
