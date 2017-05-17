@@ -9,6 +9,8 @@ import java.util.ArrayList;
  *
  */
 public class LogTime implements TimeStamp {
+	
+	
 	ArrayList<String> timestamp;
 
 	public LogTime() {
@@ -40,6 +42,9 @@ public class LogTime implements TimeStamp {
 					+ (Double.parseDouble(timestamp.get(i)) / base) + "="
 					+ (((Double.parseDouble(timestamp.get(i + 1)) / base)
 							- (Double.parseDouble(timestamp.get(i)) / base))));
+		
+		
+		
 	}
 	
 	
@@ -61,6 +66,10 @@ public class LogTime implements TimeStamp {
 	@Override
 	public void getTime() {
 		timestamp.add("" + Instant.now().toEpochMilli());
+	}
+
+	public ArrayList<String> getTimestamp() {
+		return timestamp;
 	}
 
 	/*
